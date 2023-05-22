@@ -13,14 +13,33 @@ export const HomeScreen = ( { navigation }: Props ) => {
         flex: 1
       }}>
         <View style={{
-          // backgroundColor: 'red'
-          padding: 10
+          flexDirection: 'row',
+          alignContent: 'space-between',
+          padding: 10,
+
         }}>
           <TouchableOpacity
             activeOpacity={ 0.7 }
             onPress={ () => navigation.navigate('ComidaScreen') }
+            style={ buttonStyle.container }
           >
             <Text style={ buttonStyle.text }>Comida</Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity
+            activeOpacity={ 0.7 }
+            onPress={ () => navigation.navigate('TiposScreen') }
+            style={ buttonStyle.container }
+          >
+            <Text style={ buttonStyle.text }>Tipos</Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity
+            activeOpacity={ 0.7 }
+            onPress={ () => navigation.navigate('ReproduccionScreen') }
+            style={ buttonStyle.container }
+          >
+            <Text style={ buttonStyle.text }>Reproducción</Text>
           </TouchableOpacity>
           
         </View>
